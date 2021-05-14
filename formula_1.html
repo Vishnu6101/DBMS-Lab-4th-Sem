@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Formula 1 2021</title>
+    </head>
+<style>
+    body {
+        background-image: url("https://www.goodwood.com/globalassets/.road--racing/race/modern/2020/1-january/f1-2020-calendar/2020-formula-1-calendar-f1-19-silverstone-andy-hone-motorsport-images-goodwood-22012020.jpg?crop=(0,168,2600,1631)");
+        background-repeat:no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+    }
+    h1, h2, h3 {
+        background-color: white;
+        opacity: 0.8;
+        color : #000000;
+        text-align : center;
+        font-weight: bold;
+    }
+    div {
+        width: 350px;
+        margin: 0 auto;
+        font-weight: bolder;
+        font-size: large;
+    }
+
+    #SubmitButton {
+        margin: auto;
+        display: block;
+        font-weight: bold;
+    }
+
+    fieldset {
+        margin : 2% 5%;
+    }
+
+    input:not(#SubmitButton) {
+        float: right;
+        border-width: 3px;
+    }
+
+    label {
+        background-color: white;
+    }
+    
+    </style>
+    <body>
+        <h1>Formula 1 2021</h1>
+        <fieldset>
+            <h2>TEAM REGISTRATION</h2>
+            <h3>CONSTRUCTOR</h3>
+            <form name="Team_Registration" method="post" action="formula_1_Team_Registration.php">
+                <div>
+                    <p>
+                        <label for="Constructor_No">Constructor Number : </label>
+                        <input type="number" name="Constructor_No" id="Constructor_No" required>
+                    </p>
+                    <p>
+                        <label for="Constructor_Name">Constructor Name : </label>
+                        <input type="text" name="Constructor_Name" id="Constructor_Name" required>
+                    </p>
+                </div>
+                <h3>DRIVER</h3>
+                <div>
+                    <p>
+                        <label for="Driver1_No">Driver 1 Number : </label>
+                        <input type="number" name="Driver1_No" id="Driver1_No" required>
+                    </p>
+                    <p>
+                        <label for="Driver1_Name">Driver 1 Name : </label>
+                        <input type="text" name="Driver1_Name" id="Driver1_Name" required>
+                    </p>
+                    <p>
+                        <label for="Driver2_No">Driver 2 Number : </label>
+                        <input type="number" name="Driver2_No" id="Driver2_No" required>
+                    </p>
+                    <p>
+                        <label for="Driver2_Name">Driver 2 Name : </label>
+                        <input type="text" name="Driver2_Name" id="Driver2_Name" required>
+                    </p>
+                    <p>
+                        <label for="Constructor_No_Driver">Constructor Number : </label>
+                        <input type="number" name="Constructor_No_Driver" id="Constructor_No_Driver" required>
+                    </p>
+                    <p>
+                        <label for="GP_Name">GP Name : </label>
+                        <input type="text" name="GP_Name" id="GP_Name" required>
+                    </p>
+                    <p>
+                        <input id="SubmitButton" type="submit" name="Register" value="Register">
+                    </p>
+                </div>
+            </form>
+        </fieldset>
+
+
+        <fieldset>
+            <h2>PARTICIPANTS</h2>
+            <form name="Participants" method="POST" action="formula_1_Participants.php">
+                <h3>Click Below to View all the Participants of Formula 1 2021</h3>
+                <div>
+                    <p>
+                        <input id="SubmitButton" type="submit" name="View Participants" value="View Participants">
+                    </p>
+                </div>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <h2>UPDATIONS AND CORRECTIONS</h2>
+            <form name="Corrections" method="POST" action="formula_1_Corrections.php">
+                <h3>CONSTRUCTOR</h3>
+                <div>
+                    <p>
+                        <label for="Constructor_No">Constructor Number : </label>
+                        <input type="number" name="Constructor_No" id="Constructor_No" required>
+                    </p>
+                    <p>
+                        <label for="Constructor_Name">Constructor Name : </label>
+                        <input type="text" name="Constructor_Name" id="Constructor_Name" required>
+                    </p>
+                    <p>
+                        <label for="C_Podiums">Constructor Podiums : </label>
+                        <input type="number" name="C_Podiums" id="C_Podiums" required>
+                    </p>
+                    <p>
+                        <label for="C_Wins">Constructor Wins : </label>
+                        <input type="number" name="C_Wins" id="C_Wins" required>
+                    </p>
+                    <p>
+                        <input id="SubmitButton" type="submit" name="Update Constructor Details" value="Update Constructor Details">
+                    </p>
+                </div>
+            </form>
+
+            <form name="Corrections" method="POST" action="formula_1_Corrections.php">
+                <h3>DRIVER</h3>
+                <div>
+                    <p>
+                        <label for="Driver_No">Driver Number : </label>
+                        <input type="number" name="Driver_No" id="Driver_No" required>
+                    </p>
+                    <p>
+                        <label for="Driver_Name">Driver Name : </label>
+                        <input type="text" name="Driver_Name" id="Driver_Name" required>
+                    </p>
+                    <p>
+                        <label for="D_Podiums">Driver Podiums : </label>
+                        <input type="number" name="D_Podiums" id="D_Podiums" required>
+                    </p>
+                    <p>
+                        <label for="D_Wins">Driver Wins : </label>
+                        <input type="number" name="D_Wins" id="D_Wins" required>
+                    </p>
+                    <p>
+                        <input id="SubmitButton" type="submit" name="Update Driver Details" value="Update Driver Details">
+                    </p>
+                </div>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <h2>DELETE CONSTRUCTOR</h2>
+            <form name="Deletions" method="POST" action="formula_1_Deletions.php">
+                <p style="text-align: center; font-weight: bold; display: block; color: red; background-color: white;">
+                    CAUTION!!! Deleting a Constructor will automatically deletes all its Drivers
+                </p>
+                <div>
+                    <p>
+                        <label for="Constructor_No">Constructor Number : </label>
+                        <input type="number" name="Constructor_No" id="Constructor_No" required>
+                    </p>
+                    <p>
+                        <label for="Constructor_Name">Constructor Name : </label>
+                        <input type="text" name="Constructor_Name" id="Constructor_Name" required>
+                    </p>
+                    <p>
+                        <input id="SubmitButton" type="submit" name="Delete Constructor" value="Delete Constructor">
+                    </p>
+                </div>
+            </form>
+        </fieldset>
+    </body>
+</html>
